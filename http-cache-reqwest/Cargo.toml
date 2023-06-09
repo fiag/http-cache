@@ -33,8 +33,10 @@ default-features = false
 tokio = { version = "1.28.2", features = ["macros", "rt-multi-thread"] }
 
 [features]
-default = ["manager-cacache"]
-manager-cacache = ["http-cache/manager-cacache", "http-cache/cacache-tokio-runtime"]
+default = ["manager-cacache", "cacache-async-std"]
+manager-cacache = ["http-cache/manager-cacache"]
+cacache-async-std = ["http-cache/cacache-async-std"]
+cacache-tokio-runtime = ["http-cache/cacache-tokio-runtime"]
 manager-moka = ["http-cache/manager-moka"]
 
 [package.metadata.docs.rs]
