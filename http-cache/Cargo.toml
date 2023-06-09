@@ -29,7 +29,7 @@ url = { version = "2.4.0", features = ["serde"] }
 [features]
 default = ["manager-cacache", "cacache-async-runtime"]
 manager-cacache = ["cacache", "bincode"]
-cacache-async-runtime = ["cacache/async-std"]
+cacache-async-std = ["cacache/async-std"]
 cacache-tokio-runtime = ["cacache/tokio-runtime"]
 manager-moka = ["moka", "bincode"]
 with-http-types = ["http-types"]
