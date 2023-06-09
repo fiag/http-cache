@@ -34,7 +34,7 @@ tokio = { version = "1.28.2", features = ["macros", "rt-multi-thread"] }
 
 [features]
 default = ["manager-cacache"]
-manager-cacache = ["http-cache/manager-cacache"]
+manager-cacache = ["http-cache/manager-cacache-tokio"]
 manager-moka = ["http-cache/manager-moka"]
 
 [package.metadata.docs.rs]
