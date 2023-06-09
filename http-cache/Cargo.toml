@@ -27,9 +27,10 @@ serde = { version = "1.0.163", features = ["derive"] }
 url = { version = "2.4.0", features = ["serde"] }
 
 [features]
-default = ["manager-cacache"]
-manager-cacache = ["cacache", "cacache/async-std", "bincode"]
-manager-cacache-tokio = ["cacache", "cacache/tokio-runtime", "bincode"]
+default = ["manager-cacache", "cacache-async-runtime"]
+manager-cacache = ["cacache", "bincode"]
+cacache-async-runtime = ["cacache/async-std"]
+cacache-tokio-runtime = ["cacache/tokio-runtime"]
 manager-moka = ["moka", "bincode"]
 with-http-types = ["http-types"]
 
